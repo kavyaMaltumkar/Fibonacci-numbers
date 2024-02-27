@@ -1,0 +1,19 @@
+def generate_fibonacci(n):
+    fibonacci_sequence = [0, 1]
+
+    while len(fibonacci_sequence) < n:
+        next_number = fibonacci_sequence[-1] + fibonacci_sequence[-2]
+        fibonacci_sequence.append(next_number)
+
+    return fibonacci_sequence[:n]
+
+# Set the value of n to the desired number of Fibonacci numbers
+n = 10
+
+# Generate and print the Fibonacci sequence
+fibonacci_result = generate_fibonacci(n)
+print(f"The first {n} Fibonacci numbers are: {fibonacci_result}")
+
+
+output
+The first 10 Fibonacci numbers are: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
